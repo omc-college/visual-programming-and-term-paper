@@ -32,7 +32,7 @@ type FeatureEntry struct {
 
 ```rbacgen --specs ./api/ims/ims-api.yaml ./api/rbac/rbac-api.yaml ./api/timetabling/timetabling-api.yaml --output ./cmd/rbac/gen-role-template.yaml```
 
-
+при генерации Role Template есть есть эндпоинт без ролей, то нужно выдавать ошибку.
 
 
 
