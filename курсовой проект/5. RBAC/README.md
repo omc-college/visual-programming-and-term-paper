@@ -11,8 +11,6 @@ As an admin I should be able:
     * Create new Roles based on Role Template
     * Update Roles
     * Delete Roles
-
-### Техническая история (Technical Story)
 Сущность Role -> имя фичи -> списку эндпоинтов
 ```golang
 type Role struct{
@@ -24,8 +22,16 @@ type FeatureEntry struct {
     endpoints []Endpoint
     accessGranted bool
 }
-
 ```
+
+### Техническая история (Technical Story) RoleTemplate generation
+
+Необходимо в любом момент времени на основе скрипта генерировать Role Template и записывать его в базу.
+Для описания этой операции нужно добавить в Makefile таргет (вызывает rbacgen с нужными аргументами)
+Написать утилиту rbacgen которая принимает массив путей к open API спекам на базе которых нужно генерировать Role Template
+
+```rbacgen --specs ./api/ims/ims-api.yaml ./api/rbac/rbac-api.yaml ./api/timetabling/timetabling-api.yaml --output ./cmd/rbac/gen-role-template.yaml```
+
 
 
 
