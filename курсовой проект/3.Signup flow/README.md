@@ -31,6 +31,24 @@
     1. Привести в порядок эндпоинт  /signup 
     2. Описать эндпоинт доступности email (передаём email)
     3. Описать эндпоинт завершения регистрации (передаём token (string 128byte))
+5. сделайте таблицу users и credentials (ПР со схемой)
+    users:
+        * id
+        * First Name
+        * Last Name
+        * Email
+        * verified
+    email_verification_tokens:
+        * user_id
+        * verificationToken
+        * generated_at
+    credentials:
+        * user_id
+        * password_hash
+        * salt
+        * updated_at
+
+hash(salt + password) -> password_hash
 
 1. Форма регистрации (frontend)
 2. Валидация введённых данных (frontend + backend)
