@@ -49,6 +49,16 @@
         * updated_at
 
 hash(salt + password) -> password_hash
+implement repository layer:
+
+*insertUser()
+*insertCredentials()
+*insertEmailVerificationToken()
+
+*deleteEmailVerificationToken()
+*updateUser()
+
+
 
 1. Форма регистрации (frontend)
 2. Валидация введённых данных (frontend + backend)
