@@ -34,6 +34,14 @@ type FeatureEntry struct {
 
 при генерации Role Template есть есть эндпоинт без ролей, то нужно выдавать ошибку.
 
+#####authorization middleware
+Необходимо на основании https://www.openpolicyagent.org/
+написать middleware для mux роутера, которое будет выполнять authorization
+https://play.openpolicyagent.org/p/qUkvgJRpIU
+
+1. создать локальный кэш ролей (вычитать из базы)
+2. написать rego script 
+3 написать middleware с использованием модуля https://pkg.go.dev/github.com/open-policy-agent/opa/rego?tab=doc
 
 
 
