@@ -35,6 +35,21 @@ JWT: (таблица users)
     2. sub (id)
     3. iat
     4. roles []string{}
+
+1. PR with 
+    0. rename signup to ims, 
+    rename:
+    SignUp_init.down.sql to 000001_create_users_table.down.sql
+    SignUp_init.up.sql to 000001_create_users_table.up.sql
+    1. model  
+    2. SQL script with access_tokens table
+
+2. 
+repository:
+    GetUserByEmail(email string) (models.User, error)
+    GetCredentialByUserID(int userID)(models.Credentials, error)
+    InsertAccessToken()
+
 2. Если пользователь прошел проверку успешно, необходимо сгенерировать ему Access и resfresh JWT токен с правильными клеймами.
 для генерации токенов используем библиотеку - https://github.com/dgrijalva/jwt-go (https://godoc.org/github.com/dgrijalva/jwt-go#example-NewWithClaims--CustomClaimsType)
 3. следующие параметры должны быть конфигурируемы: access token ttl (default 24h), session key salt
