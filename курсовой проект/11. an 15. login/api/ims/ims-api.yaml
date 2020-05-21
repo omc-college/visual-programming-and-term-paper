@@ -1,0 +1,26 @@
+openapi: "3.0.0"
+info:
+  description: "A sample API for "
+  version: "1.0.0"
+  title: "Sample"
+  contact:
+paths:
+  sessions/:
+    post:
+      parameters:
+        - name: Email
+          in: query
+          description: for account
+          required: true
+          schema:
+            type: string
+        - name: Pasword
+          in: query
+          description: for account
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Status message
+        
