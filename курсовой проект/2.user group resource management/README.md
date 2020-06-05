@@ -28,6 +28,9 @@
             * date of birth /RO
             * group / RO
             * year /RO
+            * form of education ?
+            * date of admission to the university ?
+            * student id(студентський квиток) ?
             При нажатии кнопки сохранить, редактируемые поля валидируются и в случае если запись возможна, то профиль пользователя обновляется.
 
 
